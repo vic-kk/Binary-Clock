@@ -9,7 +9,7 @@ const lightIsOn = (digit, time, id) => (timer[digit](time) / (2 ** id) % 2 >= 1)
 const getLightsLine = (digits) => [...document.getElementById(digits).querySelectorAll("li")];
 
 /* all "magic" here */
-const getBinary = () => {
+const updateBinary = () => {
   const time = new Date();
   for (let digits in timer) {
     getLightsLine(digits).forEach((item, id) => {
@@ -20,7 +20,7 @@ const getBinary = () => {
   document.getElementById("time").innerText = time.toLocaleTimeString(); // 'redraw' time string
 };
 
-setInterval(() => getBinary(), 1000);
+setInterval(() => updateBinary(), 1000);
 
 /*
  * just animates button on the right side.
