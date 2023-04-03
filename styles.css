@@ -1,0 +1,112 @@
+html {
+  height: 100%;
+}
+body {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  position: relative;
+  height: 100%;
+  background-color: #141414;
+  overflow: hidden;
+}
+.clocks {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.binars {
+  padding: 8px 15px 15px 15px;
+  border-radius: 30px;
+  background-color: darkgray;
+  border: 3px solid white;
+  box-shadow: black 0 0 10px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+}
+.binars #button {
+  position: absolute;
+  width: 10px;
+  height: 30px;
+  left: 100%;
+  top: 25%;
+  background-color: white;
+  z-index: -1;
+  cursor: pointer;
+  transition: 0.1s transform ease-in-out;
+  transform: translateX(0);
+}
+.binars #button.act {
+  transform: translateX(-90%);
+}
+.binars:before {
+  content: " ";
+  position: absolute;
+  width: 60%;
+  height: 100vw;
+  bottom: -45vw;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background-color: #626262;
+  z-index: -1;
+}
+ul {
+  display: flex;
+  position: relative;
+  padding-left: 20px;
+  margin: 0;
+  align-items: center;
+  align-content: center;
+  justify-content: flex-start;
+  -moz-column-gap: 5px;
+       column-gap: 5px;
+}
+ul li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+  width: 30px;
+  height: 30px;
+  background-color: black;
+  border-radius: 50%;
+  text-align: center;
+  transition: 0.3s all;
+  font-family: monospace;
+}
+ul li.act {
+  background-color: #566aff;
+  box-shadow: inset black 0px 0px 10px;
+}
+ul#decimals li {
+  background-color: rgba(0, 0, 0, 0);
+  font-size: 16px;
+}
+ul#hours:before,
+ul#mins:before,
+ul#secs:before {
+  position: absolute;
+  left: 0;
+  text-align: right;
+  font-family: monospace;
+  font-size: 16px;
+  line-height: 28px;
+}
+ul#hours:before {
+  content: "h";
+}
+ul#mins:before {
+  content: "m";
+}
+ul#secs:before {
+  content: "s";
+}
+#time {
+  margin: 10px 0 0 0;
+  font-size: 12px;
+  font-family: monospace;
+  color: white;
+  opacity: 0.25;
+}
