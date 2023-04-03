@@ -1,5 +1,4 @@
 # Binary-Clock
-Binary clock in vanillaJS
+_Copy from [Codepen.io](https://codepen.io/karasev/pen/ExoRKOL)_
 
------
-Copy from [Codepen.io](https://codepen.io/karasev/pen/ExoRKOL)
+**Binary clock in VanillaJS**
